@@ -170,3 +170,15 @@ ul {
 .mainPage img {
   width: 200px;
 }
+
+.bi-heart-fill {
+  color: grey;
+}
+
+.bi-heart-fill:hover {
+  color: rgb(20, 150, 31);
+}
+
+.colorSelected {
+  color: rgb(20, 150, 31);
+}

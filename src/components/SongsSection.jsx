@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Col, Image } from 'react-bootstrap'
+import { setDetailSong } from '../redux/actions'
+import { useDispatch } from 'react-redux'
 
-const SongsSection = (props) => {
+const SongsSection = ({ search }) => {
   const [songs, setSongs] = useState([])
+
+  const dispatch = useDispatch()
 
   const handleFetch = async (artistName) => {
     try {
@@ -19,13 +23,13 @@ const SongsSection = (props) => {
   }
 
   useEffect(() => {
-    handleFetch(props.search)
+    handleFetch(search)
   }, [])
 
   return songs ? (
     songs.slice(0, 4).map((song, index) => {
       return (
-        <Col className="text-center" key={index}>
+        <Col className="text-center" key={index} onClick={() => dispatch(setDetailSong(song))}>
           <Image src={song.album.cover_medium} alt="track" />
           <p>
             Track: {song.title}
