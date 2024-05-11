@@ -16,7 +16,7 @@ const MyMain = () => {
         </Col>
       </Row>
       <MySearch />
-      <Row className="row">
+      <Row>
         <Col xs={10}>
           <div id="rock">
             <h2>Rock Classics</h2>

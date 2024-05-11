@@ -27,7 +27,9 @@ const SongsSection = ({ search }) => {
   // dato che non può essere modificato dall'utente   :(
 
   useEffect(() => {
-    dispatch(getFillMusicSection(search))
+    if (songs.length < 2) {
+      dispatch(getFillMusicSection(search))
+    }
   }, [])
 
   return songs.length > 2 ? (

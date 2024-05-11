@@ -6,6 +6,7 @@ import { Container, Row } from 'react-bootstrap'
 import MySidebar from './components/MySidebar'
 import MyMain from './components/MyMain'
 import MyPlayer from './components/MyPlayer'
+import FavouriteSongs from './components/FavouriteSongs'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <MySidebar />
           <Routes>
             <Route path="/" element={<MyMain />} />
+            <Route path="Library" element={<FavouriteSongs />} />
             <Route path="*" element={<MyMain />} />
           </Routes>
         </Row>
