@@ -31,7 +31,7 @@ const MyMain = () => {
           <div id="pop">
             <h2>Pop Culture</h2>
             <Row xs={1} sm={2} lg={3} xl={4} className="imgLinks py-3" id="popSection">
-              <SongsSection search={'katyperry'} />
+              <SongsSection search={'katy perry'} />
             </Row>
           </div>
         </Col>
