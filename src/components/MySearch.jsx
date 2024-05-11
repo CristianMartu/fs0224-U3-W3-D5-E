@@ -26,7 +26,7 @@ const MySearch = () => {
       </Col>
     </Row>
   ) : (
-    <h2></h2>
+    <></>
   )
 }
 export default MySearch

@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Col, Image } from 'react-bootstrap'
 import { getFillMusicSection, setDetailSong } from '../redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
+import LoadingSection from './LoadingSection'
 
 const SongsSection = ({ search }) => {
   const dispatch = useDispatch()
@@ -47,7 +48,7 @@ const SongsSection = ({ search }) => {
       <h1>Error: wrong search name</h1>
     )
   ) : (
-    <h1>empty</h1>
+    <LoadingSection />
   )
 }
 export default SongsSection
